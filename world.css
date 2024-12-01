@@ -1,1 +1,60 @@
-/* Add your own styles */
+header{
+    text-align: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: #637a85;
+    padding: 20px;
+    
+    
+}
+
+input{
+    padding: 5px;
+    border-color: #ddeedd;
+    padding-right: 150px;
+    text-indent: 10px;
+    background-color: #ddeedd;
+    border-radius: 10px;
+}
+
+label{
+    font-size: 20px;
+}
+
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border: #637a85;
+    text-align: left;
+    font-size: 1.5em;
+    size: 300px;
+    
+
+}
+
+button{
+    position: relative;
+    top: -25px;
+    left: 500px;
+    background-color: #77a8a8;
+    font-size: 15px;
+    border-radius: 10px;
+    border-color: #77a8a8;
+    color: #f0efef;
+}
+
+th{
+    text-align: center;
+}
+
+td{
+    text-align: left;
+}
+
+
+main{
+    background-color: #f0efef;
+    font-family: monospace;
+    padding-top: 10px;
+}

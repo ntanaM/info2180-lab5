@@ -9,11 +9,12 @@ document.addEventListener("DOMContentLoaded", function(){
     function buttonListener(){
         const userQuery = userInput.value.toLowerCase();
         const userRequest = new XMLHttpRequest();
-        userRequest.open(`GET`, `world.php?country=${encodeURIComponent(userQuery)}`, true);
+        userRequest.open('GET', `world.php?country=${encodeURIComponent(userQuery)}`, true);
         userRequest.onreadystatechange = function(){
             if(userRequest.readyState === XMLHttpRequest.DONE){
                 if(userRequest.status === 200){
-                    alert("This is working");
+                    let response = userRequest.responseText;
+                    result.innerHTML = response;
                 }
 
                 else{
@@ -25,6 +26,6 @@ document.addEventListener("DOMContentLoaded", function(){
     };
 
 
-    button.addEventListener('click', buttonListener());
+    button.addEventListener('click', buttonListener);
 
 });

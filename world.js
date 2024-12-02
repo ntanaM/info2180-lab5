@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function(){
     };
 
     function cityListener(){
+        const userQuery = userInput.value.toLowerCase();
         const userRequest = new XMLHttpRequest();
         const lookupString = `world.php?country=` + encodeURIComponent(userQuery) + `&lookup=` + encodeURIComponent('city');
         userRequest.open('GET', lookupString, true);

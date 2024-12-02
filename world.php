@@ -10,7 +10,7 @@ if (isset($_GET['country']) && !empty(trim($_GET['country']))){
     $userQuery = $_GET['country'];
 
     if (isset($_GET['lookup']) && $_GET['lookup'] === 'city'){
-        $stmt = $conn->prepare("SELECT * FROM countries WHERE country_code IN (SELECT code FROM countries WHERE name LIKE :country)");
+        $stmt = $conn->prepare("SELECT cities.name, cities.district, cities.population FROM cities JOIN countries ON cities.country_code = countries.code WHERE countries.name LIKE :country");
         $stmt->bindValue(':country', '%'. $userQuery . '%', PDO::PARAM_STR);
         $stmt->execute();
 
